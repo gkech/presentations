@@ -1,0 +1,16 @@
+# Excerpt: backup schedule section of a PerconaXtraDBCluster CR
+# Add this under spec.backup in your cluster manifest
+backup:
+  image: percona/percona-xtradb-cluster-operator:1.x.x-pxc8.0-backup-pxb8.0
+  storages:
+    s3-storage:
+      type: s3
+      s3:
+        bucket: my-backup-bucket
+        region: us-east-1
+        credentialsSecret: my-s3-secret
+  schedule:
+    - name: daily-backup
+      schedule: "0 2 * * *"
+      keep: 7
+      storageName: s3-storage

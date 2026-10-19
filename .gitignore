@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+
+# Node (marp-cli & friends)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Marp build output
+# Rendered PDFs are committed deliverables and deliberately not ignored.
+dist/
+slides.html
+slides.pptx
+*.local.html
+
+# Claude Code local settings
+.claude/settings.local.json

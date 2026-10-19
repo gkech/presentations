@@ -1,0 +1,4 @@
+# Inline SVG diagrams in slides.md need HTML passthrough. Without this, Marp escapes
+# every <svg> to text. Keeping it here means `marp slides.md -o deck.pdf` still works
+# with no flags; `--html` on the command line does the same thing.
+html: true

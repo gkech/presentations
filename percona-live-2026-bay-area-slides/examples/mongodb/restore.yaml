@@ -1,0 +1,7 @@
+apiVersion: psmdb.percona.com/v1
+kind: PerconaServerMongoDBRestore
+metadata:
+  name: my-restore
+spec:
+  clusterName: my-cluster
+  backupName: my-psmdb-backup
